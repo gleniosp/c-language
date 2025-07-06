@@ -1,0 +1,6 @@
+.gdb_history
+
+*.out
+*.bin
+*.elf
+c-asm.s

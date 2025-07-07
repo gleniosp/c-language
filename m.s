@@ -1,3 +1,4 @@
 _start:
-    j glenio
+    li sp, 0x80002000
+    jal glenio
 j .

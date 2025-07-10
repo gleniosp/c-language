@@ -1,3 +1,5 @@
 int glenio() {
-    return 3;
+    long _some_random_value = 1234576898;
+
+    return 0;
 }

@@ -1,5 +1,5 @@
 int glenio() {
-    long _some_random_value = 1234576898;
+    float _some_random_value = -2.0;
 
     return 0;
 }

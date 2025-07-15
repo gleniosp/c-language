@@ -2,10 +2,13 @@ glenio: c-asm.c m.s
 	riscv64-unknown-elf-gcc -O0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld m.s c-asm.c -o main.elf
 	riscv64-unknown-elf-objcopy -O binary main.elf main.bin
 
-assemblynodebug: c-asm.c
+assembly: c-asm.c
 	riscv64-unknown-elf-gcc -O0 -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
 
-assembly: c-asm.c
+assemblywithoptimization: c-asm.c
+	riscv64-unknown-elf-gcc -O1 -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
+
+assemblydebug: c-asm.c
 	riscv64-unknown-elf-gcc -O0 -ggdb -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
 
 compile: m.s m.ld

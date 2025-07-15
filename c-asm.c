@@ -1,5 +1,8 @@
 int glenio() {
-    double _some_random_value = 5.0;
+    volatile int i = 10;
 
-    return 0;
+    i = i + 1;
+    i = i + 10;
+
+    return i;
 }

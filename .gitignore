@@ -4,3 +4,4 @@
 *.bin
 *.elf
 c-asm.s
+*.out

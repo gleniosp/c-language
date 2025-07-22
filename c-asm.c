@@ -1,15 +1,19 @@
 void glenio() {
-    int i = 3;
+    int i = 1;
     int j = 2;
 
-    if (i == 1) {
-        j = j + 1;
-    } else if (i == 2) {
-        j = j + 2;
-    } else if (i == 3) {
-        j = j + 3;
-    } else {
-        j = j + 100;
+    switch (i) {
+        case 1:
+            j = j + 1;
+            break;
+        case 2:
+            j = j + 2;
+            break;
+        case 3:
+            j = j + 3;
+            break;
+        default:
+            j = j + 100;
     }
 
     return;

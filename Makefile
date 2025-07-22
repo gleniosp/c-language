@@ -21,6 +21,8 @@ printbinary: main.bin
 startqemu: main.elf
 	qemu-system-riscv32 -S -M virt -nographic -bios none -kernel main.elf -gdb tcp::1234
 
+loadprogram: c-asm.c m.s glenio assembly startqemu
+
 connectgdb: main.elf
 	gdb-multiarch main.elf -ex "target remote localhost:1234" -ex "break _start" -ex "continue" -q
 

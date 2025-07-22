@@ -23,3 +23,10 @@ If you want to compile the `c-asm.c` file and see its assembly while running and
 `make assembly` (to generate the `c-asm.s` file after compiling the `c-asm.c` code, which has the `glenio` function, so we can compare the step by step in the GDB session with the generated assembly file)
 
 Then you can do, in GDB: `break glenio`, to put a breakpoint in the glenio function and do `continue` to start the code execution until it reaches this breakpoint. From there, you can press `ni` to see the assembly lines being executed one by one and compare it with the `c-asm.s` file. Also, you can run `n` only instead of `ni` if you want to debug the next line of C code instead of the next line of Assembly code.
+
+### Observation
+
+I added `make assembly` at the end just to show that we only need `make glenio` to be able to run the program in QEMU. However, as we're always trying to do all of these steps to run the program and check the assembly, I've created another make statement to make this easier to run:
+
+`make loadprogram`
+`make connectgdb`

@@ -1,12 +1,14 @@
 void glenio() {
-    int j = 2;
+    int i = 11;
 
-    for (int i = 10; i > 0; i = i - 1) {
-        if (i == 5) {
-            continue;
-        }
-        j = j + 1;
+    if (i == 11) {
+        goto end;
     }
+
+    i = i + 2;
+
+    end:
+        i = i + 21;
 
     return;
 }

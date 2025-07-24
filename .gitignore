@@ -5,3 +5,5 @@
 *.elf
 c-asm.s
 *.out
+
+experiment/*.s

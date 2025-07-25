@@ -9,11 +9,8 @@
 reference "a" here witth an "extern" keyword, which would cause the same global like scope behavior */
 extern int a;
 
-void foo() {
-    a = a + 1;
-    printf("foo: %d\n", a);
-    return;
-}
+// it also works for a function
+extern void foo();
 
 void main() {
     a = a + 1;

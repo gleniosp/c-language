@@ -1,0 +1,12 @@
+{
+  "workbench.colorTheme": "GitHub Dark Default",
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.formatOnSave": true,
+  "files.autoSave": "off",
+  "editor.minimap.enabled": false,
+  "keyboard.layout": "us",
+  "workbench.editor.empty.hint": "hidden",
+  "[c]": {
+    "editor.defaultFormatter": "ms-vscode.cpptools"
+  }
+}

@@ -36,7 +36,7 @@ struct pressure_data
 // as at each point in time we'll have either temperature, humidity or pressure being read, it is better to use an union than struct, so we can save memory space
 union sensor_data
 {
-    struct temperature_data temp;
+    struct temperature_data temperature;
     struct humidity_data humidity;
     struct pressure_data pressure;
 };

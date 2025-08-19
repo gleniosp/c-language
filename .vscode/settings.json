@@ -8,5 +8,9 @@
   "workbench.editor.empty.hint": "hidden",
   "[c]": {
     "editor.defaultFormatter": "ms-vscode.cpptools"
+  },
+  "files.associations": {
+    "type_traits": "c",
+    "utility": "c"
   }
 }

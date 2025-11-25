@@ -1,5 +1,12 @@
 # Setup
 
+As stated in the main README of this repository, execute the following commands to install the toolchain, QEMU and GDB, if you haven't done it already:
+
+```bash
+sudo apt update -y
+sudo apt install -y gcc-riscv64-unknown-elf qemu-system-misc gdb-multiarch
+```
+
 To install the GDB dashboard (https://github.com/cyrus-and/gdb-dashboard):
 `wget -P ~ https://github.com/cyrus-and/gdb-dashboard/raw/master/.gdbinit`
 `pip install pygments`
@@ -24,9 +31,15 @@ If you want to compile the `c-asm.c` file and see its assembly while running and
 
 Then you can do, in GDB: `break glenio`, to put a breakpoint in the glenio function and do `continue` to start the code execution until it reaches this breakpoint. From there, you can press `ni` to see the assembly lines being executed one by one and compare it with the `c-asm.s` file. Also, you can run `n` only instead of `ni` if you want to debug the next line of C code instead of the next line of Assembly code.
 
-### Observation
+### Observations
+
+#### Combo command
 
 I added `make assembly` at the end just to show that we only need `make glenio` to be able to run the program in QEMU. However, as we're always trying to do all of these steps to run the program and check the assembly, I've created another make statement to make this easier to run:
 
 `make loadprogram`
 `make connectgdb`
+
+#### Multiplication instructions
+
+If you have multiplication or division operations in the `c-asm.c` code and wants to use the RISC-V Multiply Extension, you can use the `make assemblywithmultiplicationinstructions` command.

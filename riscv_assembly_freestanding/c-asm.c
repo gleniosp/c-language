@@ -1,14 +1,8 @@
-void glenio() {
-    int i = 11;
+void glenio()
+{
+    char a = 127;
+    char b = 4;
 
-    if (i == 11) {
-        goto end;
-    }
-
-    i = i + 2;
-
-    end:
-        i = i + 21;
-
-    return;
+    char c;
+    c = a + b;
 }

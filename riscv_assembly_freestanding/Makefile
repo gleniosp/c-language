@@ -5,6 +5,9 @@ glenio: c-asm.c m.s
 assembly: c-asm.c
 	riscv64-unknown-elf-gcc -O0 -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
 
+assemblywithmultiplicationinstructions: c-asm.c
+	riscv64-unknown-elf-gcc -O0 -nostdlib -march=rv32im -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
+
 assemblywithoptimization: c-asm.c
 	riscv64-unknown-elf-gcc -O1 -nostdlib -march=rv32i -mabi=ilp32 -Wl,-Tm.ld c-asm.c -S
 
